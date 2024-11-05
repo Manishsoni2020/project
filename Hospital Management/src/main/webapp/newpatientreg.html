@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maddy's Hospital - New Patient Verification</title>
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Header */
+        header {
+            background-color: #74b9ff;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        header h1 {
+            font-size: 1.8em;
+        }
+
+        /* Form Section */
+        .form-container {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 50px auto;
+            padding: 30px;
+            max-width: 500px;
+            width: 100%;
+        }
+
+        .form-container h2 {
+            color: #0984e3;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        input[type="text"], input[type="email"], input[type="password"], input[type="tel"], input[type="number"] {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        label {
+            margin-bottom: 5px;
+        }
+
+        .radio-group {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #6c5ce7;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #4b47a5;
+        }
+
+        /* Footer with Images */
+        footer {
+            background-color: #fab1a0;
+            text-align: center;
+            padding: 15px;
+            margin-top: auto;
+        }
+
+        footer img {
+            width: 40px;
+            height: 40px;
+            margin: 0 10px;
+        }
+
+        footer p {
+            margin-top: 10px;
+            color: #2d3436;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Maddy's Hospital - New Patient Registration</h1>
+    </header>
+
+    <div class="form-container">
+        <h2>New Patient Verification Form</h2>
+        <form action="newpatientdata" method="get">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="pat_name" placeholder="Enter your name" required>
+            
+            <label for="fathername">Father's Name</label>
+            <input type="text" id="fathername" name="father_name" placeholder="Enter your father's name" required>
+            
+            <label for="mothername">Mother's Name</label>
+            <input type="text" id="mothername" name="mother_name" placeholder="Enter your mother's name" required>
+            
+            <label for="age">Age</label>
+            <input type="text" id="age" name="age" placeholder="Enter your age" required>
+            
+            <label for="address">Address</label>
+            <input type="text" id="address" name="address" placeholder="Enter your address" required>
+            
+            <label for="diseases">Diseases</label>
+            <input type="text" id="diseases" name="diseases" placeholder="Enter your diseases (if any)">
+            
+            <label for="email">Email</label>
+            <input type="text" id="email" name="email" placeholder="Enter your email" required>
+            
+            <label for="password">Password</label>
+            <input type="text" id="password" name="pass" placeholder="Enter your password" required>
+            
+            <label for="contact">Contact</label>
+            <input type="text" id="contact" name="contact" placeholder="Enter your contact number" required>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Maddy's Hospital</p>
+    </footer>
+
+</body>
+</html>

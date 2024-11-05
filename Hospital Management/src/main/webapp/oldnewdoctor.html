@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maddy's Hospital - Doctor Section</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('dstaff.jpg'); /* Replace with the URL of a doctor-related background image */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #444;
+        }
+
+        /* Header */
+        header {
+            background-color: rgba(72, 163, 248, 0.8);
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-size: 1.5em;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Doctor Section */
+        #doctor {
+            margin: 80px auto;
+            padding: 40px;
+            max-width: 600px;
+            background-color: rgba(234, 250, 241, 0.85);
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 2s ease;
+        }
+
+        #doctor h2 {
+            color: #0076be;
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            animation: slideIn 1s ease-out;
+        }
+
+        #doctor p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            animation: fadeIn 1.5s ease;
+        }
+
+        /* Doctor Buttons as Anchor Tags */
+        .doctor-options {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            animation: bounceIn 1.5s ease;
+        }
+
+        a.btn {
+            display: inline-block;
+            padding: 14px 25px;
+            font-size: 1.1em;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+
+        .new-doctor-btn {
+            background-color: #28a745;
+        }
+
+        .new-doctor-btn:hover {
+            background-color: #218838;
+        }
+
+        .old-doctor-btn {
+            background-color: #ff7043;
+        }
+
+        .old-doctor-btn:hover {
+            background-color: #e65c30;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(-20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes bounceIn {
+            from { transform: scale(0.9); }
+            to { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Doctor's Section</h1>
+    </header>
+
+    <section id="doctor">
+        <h2>Doctor Portal</h2>
+        <p>Please select if you're a new doctor registering or an existing doctor logging in.</p>
+
+        <div class="doctor-options">
+            <a href="newdoctreg.html" class="btn new-doctor-btn">New Doctor Registration</a>
+            <a href="olddoctreg.html" class="btn old-doctor-btn">Old Doctor Login</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Maddy's Hospital. All rights reserved.</p>
+    </footer>
+</body>
+</html>

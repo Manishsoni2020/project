@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maddy's Hospital - Old Patient Verification</title>
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f7f7f7;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Header */
+        header {
+            background-color: #55efc4;
+            color: #2d3436;
+            text-align: center;
+            padding: 20px;
+        }
+
+        header h1 {
+            font-size: 1.6em;
+        }
+
+        /* Form Section */
+        .form-container {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 50px auto;
+            padding: 30px;
+            max-width: 400px;
+            width: 100%;
+        }
+
+        .form-container h2 {
+            color: #0984e3;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        input[type="text"], input[type="email"], input[type="tel"] {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        input[type="submit"] {
+            background-color: #6c5ce7;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #4b47a5;
+        }
+
+        /* Footer with Images */
+        footer {
+            background-color: #fab1a0;
+            text-align: center;
+            padding: 15px;
+            margin-top: auto;
+        }
+
+        footer img {
+            width: 40px;
+            height: 40px;
+            margin: 0 10px;
+        }
+
+        footer p {
+            margin-top: 10px;
+            color: #2d3436;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Maddy's Hospital</h1>
+    </header>
+
+    <div class="form-container">
+        <h2>Old Patient Verification</h2>
+        <form action="oldpt" method="get">
+            <input type="text" name="name" placeholder="Name" required>
+            <input type="text" name="email" placeholder="Email" required>
+            <input type="text" name="contact" placeholder="Contact" required>
+            <input type="submit" value="Verify">
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Maddy's Hospital</p>
+    </footer>
+
+</body>
+</html>

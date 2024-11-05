@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maddy's Hospital - Welcome</title>
+    <style>
+        /* Global Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #e0e3e6;
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            color: rgb(0, 0, 0);
+        }
+
+        /* Title Styling */
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 50px;
+        }
+
+        /* Login Message Styling */
+        .login-message {
+            font-size: 2rem;
+            margin-top: 50px;
+            opacity: 0;
+            animation: fadeIn 3s forwards 6s;
+        }
+
+        /* Sky Shoot Animation */
+        .sky-shoot {
+            position: absolute;
+            top: 30%;
+            left: -10%;
+            width: 5px;
+            height: 5px;
+            background-color: white;
+            box-shadow: 0 0 10px 5px white;
+            animation: shoot 5s ease-in-out forwards;
+        }
+
+        @keyframes shoot {
+            0% {
+                transform: translate(0, 0) rotate(45deg);
+                opacity: 1;
+            }
+            50% {
+                transform: translate(600px, -400px) rotate(45deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translate(1200px, -800px) rotate(45deg);
+                opacity: 0;
+            }
+        }
+
+        /* Fade-in animation for the login message */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Confetti Styles */
+        .confetti-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 30px;
+            background-color: var(--confetti-color, #f0f);
+            opacity: 0;
+            animation: fall 6s linear infinite;
+            transform-origin: center;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(-100vh) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh) rotate(1080deg); /* Faster rotation */
+                opacity: 0;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Maddy's Hospital</h1>
+
+        <!-- Sky Shoot Animation -->
+        <div class="sky-shoot"></div>
+
+        <!-- Successfully Logged In Message -->
+        <p class="login-message">Successfully Logged In</p>
+
+        <!-- Confetti Effect -->
+        <div class="confetti-container"></div>
+    </div>
+
+    <!-- Confetti Script -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const confettiContainer = document.querySelector('.confetti-container');
+
+            // Generate Confetti
+            for (let i = 0; i < 500; i++) { // Increased the confetti to 500 for full screen coverage
+                const confetti = document.createElement('div');
+                confetti.classList.add('confetti');
+                
+                // Random colors for each confetti
+                const colors = ['#f39c12', '#e74c3c', '#2ecc71', '#9b59b6', '#3498db', '#f1c40f', '#ff5733', '#ff66b2', '#33ccff', '#ff33cc', '#6633ff'];
+                const randomColor = colors[Math.floor(Math.random() * colors.length)];
+                confetti.style.setProperty('--confetti-color', randomColor);
+
+                // Random positioning and sizing
+                confetti.style.left = `${Math.random() * 100}vw`;
+                confetti.style.width = `${Math.random() * 10 + 5}px`;  // Random size
+                confetti.style.height = `${Math.random() * 20 + 10}px`; // Random size
+                
+                // Random fall speed and rotation
+                confetti.style.animationDuration = `${Math.random() * 4 + 3}s`; // Random fall duration
+                confetti.style.animationDelay = `${Math.random() * 2}s`; // Random start delay
+
+                confettiContainer.appendChild(confetti);
+            }
+        });
+    </script>
+</body>
+</html>

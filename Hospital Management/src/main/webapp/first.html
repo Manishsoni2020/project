@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maddy's Hospital</title>
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+            font-family: 'Arial', sans-serif;
+            overflow-x: hidden;
+            animation: fadeInPage 1.5s ease-in-out;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background-image: url('hospital1.jpg'); /* Replace 'hospital1.jpg' with your hospital-related background image */
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Header */
+        header {
+            background-color: #0984e3;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2em;
+            margin: 0;
+            animation: slideInFromTop 1.2s ease-out;
+        }
+
+        /* Navigation Bar */
+        nav {
+            position: fixed;
+            top: 100px;
+            left: 0;
+            width: 180px;
+            padding: 20px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            z-index: 1;
+            animation: slideInFromLeft 1.5s ease-out;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            width: 100%;
+        }
+
+        nav ul li {
+            margin: 25px 0; /* Increased margin for more vertical space */
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.1em;
+            display: block;
+            text-align: center;
+            padding: 15px;
+            border-radius: 10px;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        /* Unique Colors for Each Button */
+        nav ul li:nth-child(1) a {
+            background-color: #0984e3;
+        }
+        nav ul li:nth-child(2) a {
+            background-color: #00b894;
+        }
+        nav ul li:nth-child(3) a {
+            background-color: #6c5ce7;
+        }
+
+        nav ul li a:hover {
+            transform: translateX(10px);
+            opacity: 0.9;
+        }
+
+        /* Content Section */
+        .content {
+            margin: 100px auto;
+            text-align: center;
+            color: #2c3e50;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 30px;
+            max-width: 800px;
+            border-radius: 10px;
+            flex-grow: 1;
+            animation: fadeInUp 1.5s ease-out;
+        }
+
+        .content h2 {
+            font-size: 2.5em;
+            color: #0984e3;
+            margin-bottom: 20px;
+        }
+
+        .content p {
+            font-size: 1.2em;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2d3436;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            width: 100%;
+            animation: slideInFromBottom 1.5s ease-out;
+        }
+
+        /* Animations */
+        @keyframes fadeInPage {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideInFromTop {
+            from { transform: translateY(-30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes slideInFromLeft {
+            from { transform: translateX(-200px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        @keyframes fadeInUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes slideInFromBottom {
+            from { transform: translateY(30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Maddy's Hospital</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="oldnewpatient.html">Patient</a></li>
+            <li><a href="oldnewdoctor.html">Doctor</a></li>
+            <li><a href="oldnewstaff.html">Staff</a></li>
+        </ul>
+    </nav>
+
+    <section class="content">
+        <h2>Welcome to Maddy's Hospital</h2>
+        <p>Providing the best healthcare services for everyone. Explore our facilities for patients, doctors, and staff.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Maddy's Hospital</p>
+    </footer>
+</body>
+</html>

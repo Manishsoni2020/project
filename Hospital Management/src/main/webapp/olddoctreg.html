@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maddy's Hospital - Old Doctor Verification</title>
+    <style>
+        /* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f7fa;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background-color: #6c5ce7;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 1.8em;
+    margin: 0;
+}
+
+/* Doctor Verification Section */
+#doctor-verification {
+    margin: 40px auto;
+    padding: 30px;
+    max-width: 500px;
+    background-color: #dfe6e9;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#doctor-verification h2 {
+    color: #fdcb6e;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.doctor-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.doctor-form label {
+    font-size: 1.1em;
+    margin-top: 15px;
+    color: #2d3436;
+}
+
+.doctor-form input {
+    width: 80%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #b2bec3;
+    border-radius: 5px;
+    font-size: 1em;
+    background-color: #ffffff;
+}
+
+.submit-btn {
+    background-color: #00cec9;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2em;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #00b894;
+}
+
+/* Footer */
+footer {
+    background-color: #2d3436;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    font-size: 0.9em;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Maddy's Hospital</h1>
+    </header>
+
+    <section id="doctor-verification">
+        <h2>Old Doctor Verification</h2>
+        <form action="h" method="get" class="doctor-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" required>
+
+            <label for="contact">Contact:</label>
+            <input type="text" id="contact" name="contact" required>
+
+            <button type="submit" class="submit-btn">Verify</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Maddy's Hospital</p>
+    </footer>
+</body>
+</html>

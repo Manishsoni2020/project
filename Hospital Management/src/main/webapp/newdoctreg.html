@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maddy's Hospital - New Doctor Registration</title>
+    <style>
+        /* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f1f3f6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 1.8em;
+    margin: 0;
+}
+
+/* Doctor Registration Section */
+#doctor-registration {
+    margin: 40px auto;
+    padding: 30px;
+    max-width: 600px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#doctor-registration h2 {
+    color: #e17055;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.doctor-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.doctor-form label {
+    font-size: 1.1em;
+    margin-top: 15px;
+    color: #2c3e50;
+}
+
+.doctor-form input {
+    width: 80%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    background-color: #eaeaea;
+}
+
+.submit-btn {
+    background-color: #00cec9;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2em;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #00a5a4;
+}
+
+/* Footer */
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    font-size: 0.9em;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Maddy's Hospital</h1>
+    </header>
+
+    <section id="doctor-registration">
+        <h2>New Doctor Registration</h2>
+        <form action="newdoctor" method="get" class="doctor-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="doc_name" required>
+
+            <label for="father-name">Father's Name:</label>
+            <input type="text" id="father-name" name="father_name" required>
+
+            <label for="contact">Contact:</label>
+            <input type="text" id="contact" name="contact" required>
+
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" required>
+
+            <label for="degree">Degree:</label>
+            <input type="text" id="degree" name="degree" required>
+
+            <label for="specialization">Specialization:</label>
+            <input type="text" id="specialization" name="specialization" required>
+
+            <label for="date-of-joining">Date of Joining:</label>
+            <input type="text" id="date-of-joining" name="join_date" required>
+
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" required>
+
+            <label for="password">Password:</label>
+            <input type="text" id="password" name="password" required>
+
+            <button type="submit" class="submit-btn">Register</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Maddy's Hospital</p>
+    </footer>
+</body>
+</html>
