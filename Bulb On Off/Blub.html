@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blub</title>
+    <link rel="icon" type="image/svg+xml" href="on.png"/>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .container h1 {
+            font-size: 50px;
+        }
+
+        img {
+            margin-top: 22px;
+            height: 380px;
+            width: 300px;
+        }
+
+        .btn button {
+            padding: 20px;
+            font-size: 22px;
+            margin-inline: 20px;
+            background-color: white;
+            text-align: center;
+            margin-top: 22px;
+            border-radius: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 >Blub <span id="text"></span></h1>
+        <img src="off.png" alt="" id="img">
+        <div class="btn">
+            <button id="on" onclick="btnOn()">On</button>
+            <button id="off" onclick="btnOff()">Off</button>
+        </div>
+    </div>
+</body>
+<script>
+
+    document.getElementById("text").innerHTML = "Off"
+    document.getElementById("off").style.backgroundColor="yellow"
+    document.getElementById("off").style.color="white"
+    const btnOn = () => {
+        document.getElementById("img").src = "on.png"
+        document.getElementById("text").innerHTML = "On"
+        document.getElementById("on").style.backgroundColor="yellow"
+        document.getElementById("on").style.color="white"
+        document.getElementById("off").style.backgroundColor="white"
+        document.getElementById("off").style.color="black"
+    }
+
+    const btnOff = () => {
+        document.getElementById("img").src = "off.png"
+        document.getElementById("text").innerHTML = "Off"
+        document.getElementById("off").style.backgroundColor="yellow"
+        document.getElementById("off").style.color="white"
+        document.getElementById("on").style.backgroundColor="white"
+        document.getElementById("on").style.color="black"
+    }
+
+</script>
+
+</html>
